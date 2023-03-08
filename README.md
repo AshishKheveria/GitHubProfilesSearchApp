@@ -1,5 +1,12 @@
 # GitHubProfilesApp
 
+![Screen Shot 2023-03-08 at 11 02 37 AM](https://user-images.githubusercontent.com/76988309/223627937-c84d903d-53bb-45e1-aa27-d862472c66eb.png)
+![Screen Shot 2023-03-08 at 11 02 53 AM](https://user-images.githubusercontent.com/76988309/223627947-5a79e5ef-c79e-4af3-8085-6ef78608ed13.png)
+![Screen Shot 2023-03-08 at 11 03 03 AM](https://user-images.githubusercontent.com/76988309/223627956-5fd5e832-9d40-4098-9d8d-2aa291d5eaa4.png)
+![Screen Shot 2023-03-08 at 11 03 15 AM](https://user-images.githubusercontent.com/76988309/223627961-f492e241-44a1-4c30-8a20-d4f69ce0c3fe.png)
+![Screen Shot 2023-03-08 at 11 03 25 AM](https://user-images.githubusercontent.com/76988309/223627963-08114c4f-650b-4a34-96fe-b60babb53941.png)
+
+
 GitHubProfilesApp is an iOS application that allows users to search for GitHub profiles and view details about the selected user including their name, company, blog, location, public repositories, public gists, followers, following, hireability, bio, and more.
 
 The application has two main screens:
