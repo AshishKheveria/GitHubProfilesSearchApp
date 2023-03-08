@@ -1,0 +1,16 @@
+PODS:
+  - FireCache (0.2.0)
+
+DEPENDENCIES:
+  - FireCache
+
+SPEC REPOS:
+  trunk:
+    - FireCache
+
+SPEC CHECKSUMS:
+  FireCache: 110353dafba73d6577c5a35ffb545aee31a475e3
+
+PODFILE CHECKSUM: f94e1f23c339dbd0bbdbf61bcaed413c2c74a77e
+
+COCOAPODS: 1.11.3

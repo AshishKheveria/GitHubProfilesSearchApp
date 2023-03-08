@@ -1,0 +1,80 @@
+//
+//  DetailsViewModel.swift
+//  GitHubProfilesApp
+//
+//  Created by Ashish Kheveria on 3/7/23.
+//
+
+import Foundation
+
+class DetailsViewModel {
+
+    // MARK: - Alias
+    
+    typealias DetailsViewResult = ((_ details: UserDetailsVC.DetailsDisplayModel?, _ error: Error?) -> Void)
+    
+    // MARK: - Data
+    
+    private var dataTask: URLSessionDataTask?
+    
+    private lazy var networkManager = NetworkManager()
+    
+    internal let username: String
+    
+    // MARK: - Initializer
+    
+    public init(username: String) {
+        self.username = username
+    }
+    
+    // MARK: - De-Initializer
+    
+    deinit {
+        dataTask?.cancel()
+    }
+    
+    // MARK: - Public Methods
+    
+    public func loadUserDetails(_ completion: @escaping DetailsViewResult) {
+        
+        let pathInfo: PathParameter = [.username: username]
+        
+        guard let url = URLManager.getURLForEndpoint(.user, path: pathInfo) else { return completion(nil, nil) }
+        
+        dataTask?.cancel()
+        
+        dataTask = networkManager.dataTaskFromURL(url,
+                                                  completion: { (result: Result<User>) in
+                                                    
+            switch result {
+            case .success(let user):
+                
+                let lastUpdated = Date.string(from: user.updatedAt,
+                                              format: .dd_dash_MM_dash_yyyy_comma_space_HH_colon_mm_I_space_EEEE)
+                
+                let details = UserDetailsVC.DetailsDisplayModel(username: user.login,
+                                                                name: user.name,
+                                                                profileImageURL: user.avatarURL,
+                                                                webProfileURL: user.htmlURL,
+                                                                company: user.company,
+                                                                blog: user.blog,
+                                                                location: user.location,
+                                                                email: user.email,
+                                                                hireable: user.hireable ?? false,
+                                                                bio: user.bio,
+                                                                publicRepoCount: user.publicRepos ?? 0,
+                                                                publicGistCount: user.publicGists ?? 0,
+                                                                followersCount: user.followers ?? 0,
+                                                                followingCount: user.following ?? 0,
+                                                                updatedDate: lastUpdated)
+                
+                completion(details, nil)
+                
+            case .failure(let error):
+                completion(nil, error)
+            }
+        })
+        
+        dataTask?.resume()
+    }
+}
