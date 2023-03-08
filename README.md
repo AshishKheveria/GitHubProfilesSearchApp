@@ -25,36 +25,36 @@ On the User Details Screen, view the details about the selected user.
 Tap the "Followers" button to view the user's followers.
 
 ## Project Structure
-The project follows the Model-View-ViewModel (MVVM) design pattern, separating the business logic from the user interface.
+The project follows the Model-View-ViewModel **(MVVM)** design pattern, separating the business logic from the user interface.
 
 The application has the following files and directories:
 
 GitHubProfilesApp directory: Contains the main application files.
 
-AppDelegate.swift: Initializes the application and sets up the initial view controller.
+**AppDelegate.swift**: Initializes the application and sets up the initial view controller.
 
-SceneDelegate.swift: Handles the window and scene management.
+**SceneDelegate.swift**: Handles the window and scene management.
 
-Main.storyboard: Contains the main user interface elements.
+**Main.storyboard**: Contains the main user interface elements.
 
-Extensions directory: Contains extensions to existing classes.
+**Extensions directory**: Contains extensions to existing classes.
 
-Models directory: Contains the models used by the application.
+**Models directory**: Contains the models used by the application.
 
-Networking directory: Contains the networking classes used to fetch data from the GitHub API.
+**Networking directory**: Contains the networking classes used to fetch data from the GitHub API.
 
-View Controllers directory: Contains the view controllers used by the application.
+**View Controllers directory**: Contains the view controllers used by the application.
 
-SearchVC.swift: Contains the logic for the Search Screen.
+**SearchVC.swift**: Contains the logic for the Search Screen.
 
-UserDetailsVC.swift: Contains the logic for the User Details Screen.
+**UserDetailsVC.swift**: Contains the logic for the User Details Screen.
 
-Views directory: Contains the custom views used by the application.
+**Views directory**: Contains the custom views used by the application.
 
 ## Dependencies
 The application uses the following dependencies:
 
-'FireCache': Used to cache the user's profile image.
+**'FireCache'**: Used to cache the user's profile image.
 
 ## Credits
 This application was developed by Ashish Kheveria.
