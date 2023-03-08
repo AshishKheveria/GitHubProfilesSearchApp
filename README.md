@@ -30,15 +30,25 @@ The project follows the Model-View-ViewModel (MVVM) design pattern, separating t
 The application has the following files and directories:
 
 GitHubProfilesApp directory: Contains the main application files.
+
 AppDelegate.swift: Initializes the application and sets up the initial view controller.
+
 SceneDelegate.swift: Handles the window and scene management.
+
 Main.storyboard: Contains the main user interface elements.
+
 Extensions directory: Contains extensions to existing classes.
+
 Models directory: Contains the models used by the application.
+
 Networking directory: Contains the networking classes used to fetch data from the GitHub API.
+
 View Controllers directory: Contains the view controllers used by the application.
+
 SearchVC.swift: Contains the logic for the Search Screen.
+
 UserDetailsVC.swift: Contains the logic for the User Details Screen.
+
 Views directory: Contains the custom views used by the application.
 
 ## Dependencies
